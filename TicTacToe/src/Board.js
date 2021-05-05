@@ -1,0 +1,13 @@
+import React from 'react';
+import Square from './Square.js';
+import './board.css'
+
+export default function Board({ squares, onClick }) {
+    return (
+        <div className="board-container">
+            {squares.map((square, i) => (
+                <Square key={i} value={square} onClick={() => onClick(i)} />
+            ))}
+        </div>
+    )
+}
